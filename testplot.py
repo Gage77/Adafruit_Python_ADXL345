@@ -8,10 +8,12 @@ import Adafruit_ADXL345
 accel = Adafruit_ADXL345.ADXL345()
 
 fig = plt.figure()
-incrementor = 0.0
+global incrementor
 ax = fig.add_subplot(1, 1, 1)
 xs = []
 ys = []
+
+incrementor = 0.0
 
 def animate(i, xs, ys):
     # Read the X, Y, Z axis acceleration values and print them.
@@ -19,7 +21,6 @@ def animate(i, xs, ys):
     print('X={0}, Y={1}, Z={2}'.format(x, y, z))
 
     xs.append(incrementor)
-    incrementor = incrementor + 1
     ys.append(random.randint(-10, 10))
 
     # Limit x and y lists to 20 times
@@ -38,3 +39,4 @@ def animate(i, xs, ys):
 
 ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=100)
 plt.show()
+incrementor = incrementor + 1.0
