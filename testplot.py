@@ -19,7 +19,7 @@ def animate(i, xs, ys):
     print('X={0}, Y={1}, Z={2}'.format(x, y, z))
 
     xs.append(incrementor)
-    incr = incrementor + 1
+    incrementor = incrementor + 1
     ys.append(random.randint(-10, 10))
 
     # Limit x and y lists to 20 times
