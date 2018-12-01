@@ -1,4 +1,4 @@
-import datetime as dt
+from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import random
@@ -19,7 +19,7 @@ def animate(i, xs, ys):
     x, y, z = accel.read()
     print('X={0}, Y={1}, Z={2}'.format(x, y, z))
 
-    xs.append(dt.datetime.now().timestamp())
+    xs.append(datetime.now().milliseconds)
     ys.append(y)
 
     # Limit x and y lists to 20 times
