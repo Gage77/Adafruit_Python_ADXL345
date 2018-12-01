@@ -4,6 +4,9 @@ import matplotlib.animation as animation
 import random
 import Adafruit_ADXL345
 
+# Create an ADXL345 instance.
+accel = Adafruit_ADXL345.ADXL345()
+
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
 xs = []
