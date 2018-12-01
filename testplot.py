@@ -19,7 +19,7 @@ def animate(i, xs, ys):
     x, y, z = accel.read()
     print('X={0}, Y={1}, Z={2}'.format(x, y, z))
 
-    xs.append(datetime.now().milliseconds)
+    xs.append(datetime.now())
     ys.append(y)
 
     # Limit x and y lists to 20 times
