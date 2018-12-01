@@ -8,7 +8,6 @@ import Adafruit_ADXL345
 accel = Adafruit_ADXL345.ADXL345()
 
 fig = plt.figure()
-incrementor = 0.0
 ax = fig.add_subplot(1, 1, 1)
 xs = []
 ys = []
@@ -20,8 +19,8 @@ def animate(i, xs, ys):
     x, y, z = accel.read()
     print('X={0}, Y={1}, Z={2}'.format(x, y, z))
 
-    xs.append(incrementor)
-    ys.append(random.randint(-10, 10))
+    xs.append(dt.datetime.now().timestamp())
+    ys.append(y)
 
     # Limit x and y lists to 20 times
     xs = xs[-20:]
@@ -39,4 +38,3 @@ def animate(i, xs, ys):
 
 ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=100)
 plt.show()
-incrementor = incrementor + 1.0
