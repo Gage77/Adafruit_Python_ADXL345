@@ -9,7 +9,7 @@ xs = []
 ys = []
 
 def animate(i, xs, ys):
-    xs.append(0.0)
+    xs.append(random.randint(1,10))
     ys.append(random.randint(-10, 10))
 
     # Limit x and y lists to 20 times
