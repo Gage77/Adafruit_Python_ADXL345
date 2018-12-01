@@ -37,4 +37,5 @@ def animate(i, xs, ys):
     plt.ylabel('New point')
 
 ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=100)
+ax.set_ylim([-200, 200])
 plt.show()
