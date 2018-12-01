@@ -8,7 +8,7 @@ import Adafruit_ADXL345
 accel = Adafruit_ADXL345.ADXL345()
 
 fig = plt.figure()
-global incrementor
+incrementor = 0.0
 ax = fig.add_subplot(1, 1, 1)
 xs = []
 ys = []
