@@ -35,7 +35,7 @@ def animate(i, xs, ys):
     plt.subplots_adjust(bottom=0.3)
     plt.title('Testing dynamic plotting')
     plt.ylabel('New point')
+    plt.ylim([-360, 360])
 
 ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=100)
-plt.ylim([-360, 360])
 plt.show()
