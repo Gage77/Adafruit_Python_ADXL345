@@ -26,5 +26,5 @@ def animate(i, xs, ys):
     plt.title('Testing dynamic plotting')
     plt.ylabel('New point')
 
-ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=250)
+ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=100)
 plt.show()
